@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="440" viewBox="0 0 1600 440" role="img" aria-labelledby="title desc">
+  <title id="title">Alya Aero — Cada gota, sob controle.</title>
+  <desc id="desc">Banner em azul com ondas, uma gota de água e um reservatório ilustrado.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#09253d"/><stop offset=".62" stop-color="#075174"/><stop offset="1" stop-color="#078da6"/></linearGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#7be9fa"/><stop offset="1" stop-color="#1499d0"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#a5f3fc" stroke-opacity=".06"/></pattern>
+    <clipPath id="tank"><rect x="1180" y="70" width="228" height="292" rx="34"/></clipPath>
+  </defs>
+  <rect width="1600" height="440" rx="28" fill="url(#bg)"/>
+  <rect width="1600" height="440" rx="28" fill="url(#grid)"/>
+  <path d="M0 349Q240 264 504 355T1040 350T1600 309V440H0Z" fill="#7be9fa" opacity=".08"/>
+  <path d="M0 390Q290 310 570 393T1160 376T1600 360V440H0Z" fill="#7be9fa" opacity=".1"/>
+  <g transform="translate(82 66)">
+    <rect width="51" height="51" rx="16" fill="#7be9fa" fill-opacity=".14" stroke="#7be9fa" stroke-opacity=".4"/>
+    <path d="M25.5 9C21 16 13 24 13 31a12.5 12.5 0 0 0 25 0c0-7-8-15-12.5-22Z" fill="url(#water)"/>
+    <path d="M19 31a7 7 0 0 0 5 7" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" opacity=".9"/>
+  </g>
+  <text x="153" y="99" fill="#a3e8f3" font-family="Segoe UI,Arial,sans-serif" font-size="16" font-weight="600" letter-spacing="4">MONITORAMENTO DE RESERVATÓRIOS</text>
+  <text x="80" y="205" fill="#f0fcff" font-family="Segoe UI,Arial,sans-serif" font-size="83" font-weight="750" letter-spacing="-3">Alya Aero</text>
+  <text x="84" y="259" fill="#cff6ff" font-family="Segoe UI,Arial,sans-serif" font-size="29">Cada gota, sob controle.</text>
+  <text x="84" y="311" fill="#a6d6e5" font-family="Segoe UI,Arial,sans-serif" font-size="20">Arduino · Nível de água · Controle da bomba · Painel web</text>
+  <rect x="84" y="348" width="216" height="39" rx="19.5" fill="#a5f3fc" fill-opacity=".12" stroke="#a5f3fc" stroke-opacity=".25"/>
+  <text x="109" y="374" fill="#e0faff" font-family="Segoe UI,Arial,sans-serif" font-size="18">alyaero.site.je</text>
+  <rect x="1166" y="56" width="256" height="320" rx="46" fill="#dffaff" fill-opacity=".06" stroke="#c0f6ff" stroke-opacity=".2" stroke-width="2"/>
+  <g clip-path="url(#tank)">
+    <rect x="1180" y="70" width="228" height="292" fill="#dffaff" fill-opacity=".04"/>
+    <path d="M1178 183Q1236 166 1294 183T1410 183V365H1178Z" fill="url(#water)" opacity=".87"/>
+    <path d="M1178 183Q1236 166 1294 183T1410 183" stroke="#bbf6ff" stroke-width="4" fill="none"/>
+    <circle cx="1215" cy="315" r="7" fill="#dcfaff" opacity=".5"/><circle cx="1375" cy="241" r="10" fill="#dcfaff" opacity=".4"/>
+  </g>
+  <rect x="1180" y="70" width="228" height="292" rx="34" fill="none" stroke="#bdf5ff" stroke-width="3" stroke-opacity=".6"/>
+  <path d="M1180 128H1408M1180 304H1408" stroke="#bdf5ff" stroke-opacity=".3" stroke-dasharray="5 6"/>
+  <text x="1294" y="259" text-anchor="middle" fill="#073b57" font-family="Segoe UI,Arial,sans-serif" font-size="53" font-weight="750">ÁGUA</text>
+  <text x="1294" y="287" text-anchor="middle" fill="#07415c" font-family="Segoe UI,Arial,sans-serif" font-size="12" letter-spacing="1">VISIBILIDADE EM TEMPO REAL</text>
+  <circle cx="1451" cy="105" r="6" fill="#8bf1dc"/>
+  <path d="M1423 105H1445M1451 112V152H1490" fill="none" stroke="#8bf1dc" stroke-opacity=".5" stroke-width="2"/>
+</svg>
