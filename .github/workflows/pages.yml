@@ -1,0 +1,47 @@
+name: Publicar Alya Aero no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - index.html
+      - site.css
+      - site.js
+      - favicon.svg
+      - .nojekyll
+      - docs/images/**
+      - .github/workflows/pages.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Baixar o projeto
+        uses: actions/checkout@v4
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Preparar arquivos públicos
+        run: |
+          mkdir -p _site/docs/images
+          cp index.html site.css site.js favicon.svg .nojekyll _site/
+          cp docs/images/* _site/docs/images/
+      - name: Enviar site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4

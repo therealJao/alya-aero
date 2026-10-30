@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102e2b">
+  <meta name="description" content="Conheça o Alya Aero: Arduino, água e uma interface que transforma leituras em controle. Explore o simulador, o painel e a montagem do projeto.">
+  <meta property="og:title" content="Alya Aero — Inteligência em cada gota.">
+  <meta property="og:description" content="Do circuito à sua tela. Explore o projeto, experimente a escala 0–503 e abra o painel ao vivo.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://therealjao.github.io/alya-aero/docs/images/banner.png">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="site.css">
+  <title>Alya Aero — Inteligência em cada gota.</title>
+  <script src="site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="Alya Aero, início"><svg viewBox="0 0 32 40" aria-hidden="true"><path d="M16 1C12 9 2 19 2 26a14 14 0 0 0 28 0C30 19 20 9 16 1Z" fill="currentColor"/><path d="M9 25a7 7 0 0 0 7 8" fill="none" stroke="#e6f3ad" stroke-width="2.5" stroke-linecap="round"/></svg><span>alya<span class="brand-light">aero</span><small>TECNOLOGIA QUE FLUI</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#experiencia">O painel</a><a href="#sistema">O sistema</a><a href="#guia">Comece aqui</a></nav>
+    <a class="button small dark" href="https://alyaero.site.je" target="_blank" rel="noopener noreferrer">Abrir painel <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> ARDUINO. ÁGUA. POSSIBILIDADES.</p>
+        <h1 id="hero-title">Inteligência<br>em cada <em>gota.</em></h1>
+        <p class="hero-description">Um circuito lê. Uma interface traduz.<br>Você acompanha o que realmente importa.</p>
+        <p class="intro-detail">Conheça o Alya Aero: monitoramento de reservatório, controle da bomba e dados que ganham vida na sua tela.</p>
+        <div class="hero-actions"><a class="button dark" href="https://alyaero.site.je" target="_blank" rel="noopener noreferrer">Conhecer o painel <span aria-hidden="true">↗</span></a><a class="text-link" href="#sistema">Explore o projeto <span aria-hidden="true">↓</span></a></div>
+        <div class="hero-foot"><span class="micro-mark" aria-hidden="true">⌁</span><p>DO SINAL ANALÓGICO<br><strong>À DECISÃO EM TEMPO REAL.</strong></p></div>
+      </div>
+
+      <div class="reservoir-lab" aria-label="Demonstração interativa do reservatório">
+        <div class="lab-header"><span><i></i> LABORATÓRIO INTERATIVO</span><span>01 / ÁGUA</span></div>
+        <div class="lab-stage">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <span class="stage-coordinate coord-top">ADC &nbsp; / &nbsp; 0—503<br>PROJETO ARDUINO</span>
+          <div class="sensor-tag"><span class="tag-dot"></span><span>SENSOR · A2<strong><output id="adc-readout" for="raw-range">315</output> <small>ADC</small></strong></span></div>
+          <svg class="tank-illustration" viewBox="0 0 440 420" role="img" aria-label="Reservatório ilustrado, nível demonstrativo" id="tank-art">
+            <defs>
+              <linearGradient id="glass" x1="0" x2="1"><stop stop-color="#a4d8c0" stop-opacity=".12"/><stop offset=".45" stop-color="#d9f3d8" stop-opacity=".025"/><stop offset="1" stop-color="#d9f3d8" stop-opacity=".15"/></linearGradient>
+              <linearGradient id="liquid" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#d9f580"/><stop offset="1" stop-color="#4d9e83"/></linearGradient>
+              <linearGradient id="liquid-top" x2="1"><stop stop-color="#e6ff9e"/><stop offset="1" stop-color="#91cda7"/></linearGradient>
+              <clipPath id="vessel"><path d="M115 85C115 43 325 43 325 85V338C325 380 115 380 115 338Z"/></clipPath>
+            </defs>
+            <ellipse cx="220" cy="384" rx="146" ry="19" fill="#030d0c" opacity=".32"/>
+            <path d="M115 85C115 43 325 43 325 85V338C325 380 115 380 115 338Z" fill="url(#glass)" stroke="#b8e8cb" stroke-opacity=".38" stroke-width="1.5"/>
+            <g clip-path="url(#vessel)">
+              <path id="liquid-body" d="M115 179Q220 220 325 179V340C325 380 115 380 115 340Z" fill="url(#liquid)" opacity=".82"/>
+              <ellipse id="liquid-surface" cx="220" cy="179" rx="105" ry="29" fill="url(#liquid-top)" opacity=".87"/>
+              <path d="M131 91V338" stroke="#e9fff0" stroke-opacity=".28" stroke-width="5"/>
+              <circle class="bubble bubble-one" cx="157" cy="310" r="5" fill="#e3ffc0" opacity=".6"/><circle class="bubble bubble-two" cx="284" cy="275" r="3" fill="#e3ffc0" opacity=".7"/>
+            </g>
+            <ellipse cx="220" cy="85" rx="105" ry="29" fill="none" stroke="#c5e9ce" stroke-opacity=".6"/>
+            <path d="M115 338C115 380 325 380 325 338" fill="none" stroke="#d8f8df" stroke-opacity=".55"/>
+            <path d="M345 85h12v253h-12M351 136h6M345 187h12M351 238h6M345 289h12" fill="none" stroke="#91ac9e" stroke-width="1"/>
+            <g fill="#a5bbae" font-family="monospace" font-size="10"><text x="370" y="89">100</text><text x="370" y="191">50</text><text x="370" y="342">0</text></g>
+            <path d="M220 34V58M205 34h30" stroke="#d8f580" stroke-width="2"/><circle cx="220" cy="30" r="5" fill="#d8f580"/>
+          </svg>
+          <div class="level-tag"><output id="level-readout" for="raw-range">63<span>%</span></output><span>CAPACIDADE PREENCHIDA</span></div>
+          <div class="pump-tag"><i id="pump-dot"></i><span>BOMBA <strong id="pump-status">DESLIGADA</strong></span><span aria-hidden="true">↗</span></div>
+        </div>
+        <div class="lab-control">
+          <div class="control-caption"><label for="raw-range">Mova. Veja. Entenda.</label><span>SIMULAÇÃO · SEM HARDWARE</span></div>
+          <input id="raw-range" type="range" min="0" max="503" value="315" aria-describedby="range-help">
+          <div class="range-labels"><span>0 · VAZIO</span><div class="scenario-buttons"><button type="button" data-raw="0">0%</button><button type="button" data-raw="252">50%</button><button type="button" data-raw="503">100%</button></div><span>503 · CHEIO</span></div>
+          <p id="range-help">Demonstração do automático: liga até 20%, desliga a partir de 80%.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-strip wrap" aria-label="Características do projeto"><p><strong>503<span>ADC</span></strong><span>A REFERÊNCIA DE 100%</span></p><p><strong>120<span>amostras</span></strong><span>NO HISTÓRICO DA SESSÃO</span></p><p><strong>02<span>modos</span></strong><span>AUTOMÁTICO + MANUAL</span></p><p class="strip-note">Menos adivinhação.<br><em>Mais visibilidade.</em><span aria-hidden="true">↘</span></p></div>
+
+    <section class="experience" id="experiencia" aria-labelledby="experience-title">
+      <div class="wrap">
+        <div class="section-top"><p class="eyebrow">01 / EXPERIÊNCIA</p><span class="section-index">UM PAINEL. VÁRIAS PERSPECTIVAS.</span></div>
+        <div class="experience-heading"><h2 id="experience-title">Do circuito<br>à sua <em>tela.</em></h2><div><p>O nível vira movimento. O histórico vira contexto.<br>E cada comando encontra seu lugar.</p><p class="muted">Capturas reais do painel em modo de simulação.</p></div></div>
+        <div class="gallery-controls" role="tablist" aria-label="Temas do painel"><button role="tab" id="tab-aero" aria-selected="true" aria-controls="gallery-panel" data-theme="aero">Frutiger Aero <span>01</span></button><button role="tab" id="tab-alya" aria-selected="false" aria-controls="gallery-panel" tabindex="-1" data-theme="alya">Alya Kujou <span>02</span></button><button role="tab" id="tab-corinthians" aria-selected="false" aria-controls="gallery-panel" tabindex="-1" data-theme="corinthians">Corinthians <span>03</span></button></div>
+        <div id="gallery-panel" class="gallery-panel" role="tabpanel" aria-labelledby="tab-aero">
+          <div class="browser-chrome"><span class="browser-dots" aria-hidden="true">● ● ●</span><span>alyaero.site.je</span><button id="expand-gallery" aria-label="Ampliar captura do painel">Ampliar <span aria-hidden="true">↗</span></button></div>
+          <img id="gallery-image" src="docs/images/painel-desktop.png" alt="Painel Alya Aero no tema Frutiger Aero, exibindo tanque e curva de nível em simulação" width="1440" height="850" loading="lazy">
+        </div>
+        <div class="feature-row"><article><span>01</span><h3>Veja o nível.</h3><p>Um reservatório animado transforma a leitura do sensor em uma porcentagem fácil de acompanhar.</p></article><article><span>02</span><h3>Entenda o ciclo.</h3><p>Curva de enchimento, limites visíveis e histórico exportável em CSV, com até 120 registros da sessão.</p></article><article><span>03</span><h3>Acompanhe o uso.</h3><p>Acionamentos, tempo ligado e litros estimados a partir da vazão configurada, enquanto chegam dados.</p></article></div>
+      </div>
+    </section>
+
+    <section class="system wrap" id="sistema" aria-labelledby="system-title">
+      <div class="section-top"><p class="eyebrow">02 / ENGENHARIA À VISTA</p><span class="section-index">DO FÍSICO AO DIGITAL.</span></div>
+      <div class="system-grid">
+        <div class="system-intro"><h2 id="system-title">Simples no uso.<br>Preciso na<br><em>lógica.</em></h2><p>O Arduino cuida do controle. O navegador mostra o que está acontecendo e envia seus comandos.</p><a class="text-link" href="https://github.com/therealJao/alya-aero" target="_blank" rel="noopener noreferrer">Explore no GitHub <span aria-hidden="true">↗</span></a></div>
+        <div class="system-steps">
+          <details open><summary><span>01</span><strong>Uma leitura. Um ponto de partida.</strong><i aria-hidden="true">+</i></summary><div><p>Na montagem atual, o potenciômetro em A2 representa o nível de água. A média de leituras reduz pequenas oscilações.</p><div class="signal-path"><span>ENTRADA A2</span><b>→</b><span>LEITURA ADC</span><b>→</b><span>NÍVEL %</span></div></div></details>
+          <details><summary><span>02</span><strong>503 é o novo 100%.</strong><i aria-hidden="true">+</i></summary><div><p>Zero significa vazio. 503 significa cheio. Leituras maiores continuam em 100%. O painel e o firmware precisam usar a mesma calibração.</p><code>nível = limitar(leitura × 100 / 503, 0, 100)</code></div></details>
+          <details><summary><span>03</span><strong>A bomba segue uma lógica.</strong><i aria-hidden="true">+</i></summary><div><p>No automático, liga em até 20% e desliga a partir de 80%. Entre os limites, mantém o estado anterior. Os limites são ajustáveis no painel.</p><p>No manual, o limite máximo continua protegendo o enchimento. Desligar muda o modo para Manual.</p></div></details>
+          <details><summary><span>04</span><strong>O circuito conversa com a interface.</strong><i aria-hidden="true">+</i></summary><div><p>A conexão USB usa Web Serial, JSON e 9600 baud. O firmware também mantém SoftwareSerial para o módulo Bluetooth; o painel publicado utiliza USB.</p><p>O controle automático continua no Arduino, mesmo sem a página aberta.</p></div></details>
+        </div>
+      </div>
+      <div class="telemetry"><div><p class="eyebrow">UMA LEITURA, TRADUZIDA.</p><h3>O mesmo sinal.<br><em>Duas linguagens.</em></h3><p>O JSON acompanha o reservatório do laboratório. Mova o controle no início da página para ver a transformação.</p><a class="text-link" href="#inicio">Voltar ao laboratório <span aria-hidden="true">↑</span></a></div><div class="code-window"><div><span>telemetria.json</span><span class="demo-badge">EXEMPLO INTERATIVO</span></div><pre aria-label="Exemplo de telemetria"><code id="telemetry-code"></code></pre></div></div>
+    </section>
+
+    <section class="guide" id="guia" aria-labelledby="guide-title"><div class="wrap">
+      <div class="section-top"><p class="eyebrow">03 / COLOQUE EM MOVIMENTO</p><span class="section-index">DO PRIMEIRO CLIQUE AO CIRCUITO.</span></div>
+      <div class="guide-heading"><h2 id="guide-title">Comece curioso.<br>Saia <em>conectado.</em></h2><a class="button dark" href="https://alyaero.site.je" target="_blank" rel="noopener noreferrer">Experimentar agora <span aria-hidden="true">↗</span></a></div>
+      <div class="guide-grid"><article><span class="step-no">01 / SEM HARDWARE</span><h3>Conheça o painel.</h3><p>Abra o site e clique em <strong>Simular</strong>. Acompanhe o tanque, alterne os modos e teste os controles sem montar o circuito.</p></article><article><span class="step-no">02 / NA BANCADA</span><h3>Prepare o Arduino.</h3><p>Na IDE Arduino, envie o sketch da sua montagem para o Uno. Para o potenciômetro, confira a calibração 0–503 e a velocidade de 9600 baud.</p></article><article><span class="step-no">03 / EM TEMPO REAL</span><h3>Faça a conexão.</h3><p>Feche o Monitor Serial. No Chrome ou Edge do computador, abra o painel, escolha <strong>9600 baud</strong> e clique em <strong>Conectar Arduino</strong>.</p></article></div>
+      <div class="hardware-layout"><div class="hardware-heading"><span class="eyebrow">MAPA DA MONTAGEM ATUAL</span><h3>Pequeno circuito.<br>Grandes conexões.</h3><p>Arduino Uno + potenciômetro de 10 kΩ + relé.</p><span class="hardware-label">ALIMENTAÇÃO DA BOMBA SEPARADA DO ARDUINO</span></div><div class="pin-map"><div><span>A0</span><p>Potenciômetro<strong>Externo positivo · HIGH</strong></p><b>↗</b></div><div><span>A2</span><p>Leitura analógica<strong>Terminal central · entrada</strong></p><b>→</b></div><div><span>A4</span><p>Potenciômetro<strong>Externo negativo · LOW</strong></p><b>↘</b></div><div><span>D13</span><p>Relé<strong>Sinal de controle · ativo em LOW</strong></p><b>→</b></div></div></div>
+      <p class="hardware-note">A0 e A4 são GPIO usados nessa montagem de teste. O relé e a bomba precisam de alimentação adequada. D13 também é o LED integrado: evite uma segunda escrita nesse pino.</p>
+      <div class="faq"><div><p class="eyebrow">ANTES DE CONECTAR</p><h3>Sem mistério.</h3></div><div>
+        <details><summary>Posso controlar o Arduino pela internet?<span aria-hidden="true">+</span></summary><p>A hospedagem apresenta o site, mas não cria uma conexão remota com a placa. Na versão USB, o Arduino deve estar conectado ao computador que abriu o painel, em HTTPS ou localhost.</p></details>
+        <details><summary>Os litros são uma medição real de vazão?<span aria-hidden="true">+</span></summary><p>São uma estimativa: tempo observado com a bomba ligada × vazão configurada. A vazão padrão é 120 L/h. Isso não substitui um sensor de fluxo nem mede o consumo na saída do tanque.</p></details>
+        <details><summary>O que acontece se os dados pararem?<span aria-hidden="true">+</span></summary><p>Após 5 segundos sem dados, o painel sinaliza a ausência de leitura, bloqueia Ligar e suspende a contagem de uso. Períodos com a página fechada ou desconectada não são recuperados.</p></details>
+        <details><summary>E a versão com ultrassônico?<span aria-hidden="true">+</span></summary><p>É uma montagem alternativa com HC-SR04: TRIG D9, ECHO D10, relé D7 e 115200 baud. Ela usa altura útil e distância com o tanque cheio. A escala 0–503 desta página é do potenciômetro, não uma distância em centímetros.</p></details>
+      </div></div>
+    </div></section>
+
+    <section class="closing wrap"><div class="closing-symbol" aria-hidden="true">⌁</div><p class="eyebrow">DA IDEIA PARA A ÁGUA.</p><h2>Agora, deixe<br>a ideia <em>fluir.</em></h2><p>Explore o painel. Entenda o circuito. Acompanhe cada gota.</p><a class="button lime" href="https://alyaero.site.je" target="_blank" rel="noopener noreferrer">Abrir o Alya Aero <span aria-hidden="true">↗</span></a><a class="closing-github" href="https://github.com/therealJao/alya-aero" target="_blank" rel="noopener noreferrer">Ver o projeto no GitHub ↗</a></section>
+  </main>
+  <footer class="wrap"><a class="footer-brand" href="#inicio">alya<span>aero</span></a><p>Um projeto de João Costa.<br><span>Água, circuitos e um pouco de curiosidade.</span></p><a href="#inicio">Voltar ao topo ↑</a></footer>
+  <dialog id="image-dialog" aria-label="Captura ampliada do painel"><button id="close-dialog" aria-label="Fechar imagem ampliada">Fechar ✕</button><img id="expanded-image" src="docs/images/painel-desktop.png" alt="Captura ampliada do painel Alya Aero"></dialog>
+</body>
+</html>
