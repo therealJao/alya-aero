@@ -4,7 +4,7 @@
 
 ### Seu reservatório, acompanhado em tempo real.
 
-Um painel web para visualizar o nível da água, controlar a bomba e acompanhar seu uso com Arduino.
+Um sistema para visualizar o nível da água, controlar a bomba e acompanhar seu uso com Arduino.
 
 [![Acessar o site](https://img.shields.io/badge/ABRIR_O_SITE-alyaero.site.je-078da6?style=for-the-badge)](https://alyaero.site.je)
 ![Arduino Uno](https://img.shields.io/badge/Arduino-Uno-00878f?style=for-the-badge&logo=arduino&logoColor=white)
